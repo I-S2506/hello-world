@@ -1,32 +1,22 @@
-/**
- * @file hello.cpp
- * @author Ishani
- * @date 26-01-2026
- * @brief Program to greet user in different languages
- */
-
 #include <iostream>
 using namespace std;
 
-/**
- * @brief Displays greeting based on language choice
- * @param name Name of the user
- * @param choice Language selected by the user
- */
-void sayHello(string name, int choice)
-{
+void sayHello(string name, int choice) {
     if (choice == 1)
         cout << "Hello, " << name << "!" << endl;
     else if (choice == 2)
         cout << "Hola, " << name << "!" << endl;
     else if (choice == 3)
         cout << "Bonjour, " << name << "!" << endl;
+    else if (choice == 4)
+        cout << "Hallo, " << name << "!" << endl;      // German
+    else if (choice == 5)
+        cout << "Konnichiwa, " << name << "!" << endl; // Japanese
     else
         cout << "Invalid choice!" << endl;
 }
 
-int main()
-{
+int main() {
     string name;
     int choice;
 
@@ -34,7 +24,12 @@ int main()
     cin >> name;
 
     cout << "Choose language:\n";
-    cout << "1. English\n2. Spanish\n3. French\n";
+    cout << "1. English\n";
+    cout << "2. Spanish\n";
+    cout << "3. French\n";
+    cout << "4. German\n";
+    cout << "5. Japanese\n";
+
     cin >> choice;
 
     sayHello(name, choice);
